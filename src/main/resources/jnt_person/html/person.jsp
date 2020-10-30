@@ -80,7 +80,7 @@
 
 	var person = document.getElementById('person_${currentNode.identifier}');
     person.addEventListener("click", function(e) {
-         ShowHideLayer(e.target.id.replace("person_", ""));
+         ShowHideLayer(e.currentTarget.id.replace("person_", ""));
     });
 
 });
