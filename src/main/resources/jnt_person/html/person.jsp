@@ -78,12 +78,10 @@
 		'overlayShow'	:	false
 	});
 
-	var persons = document.getElementsByClassName("personBiographiy");
-	for (var i = 0; i < persons.length; i++) {
-	    persons[i].addEventListener("click", function(e) {
-	         ShowHideLayer(e.target.id);
-        });
-    }
+	var person = document.getElementById('${currentNode.identifier}');
+    person.addEventListener("click", function(e) {
+         ShowHideLayer(e.target.id);
+    });
 
 });
 </script>
