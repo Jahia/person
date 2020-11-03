@@ -40,7 +40,7 @@
 
         <div class="personAction">
 			<a class="personEnlarge" id="apict${currentNode.identifier}" href="#pict${currentNode.identifier}"> <fmt:message key='FullSizePicture'/></a>
-            <a class="personBiographiy" href="javascript:;" onclick="ShowHideLayer('${currentNode.identifier}');"><fmt:message
+            <a class="personBiographiy" href="javascript:;" id="person_${currentNode.identifier}"><fmt:message
                     key='jnt_person.biography'/></a>
             <a class="personBiographiy" href="<c:url value='${url.base}${currentNode.path}.vcf'/>"><fmt:message
                     key='jnt_person.vcard'/></a>
@@ -77,6 +77,11 @@
 		'speedOut'		:	200,
 		'overlayShow'	:	false
 	});
+
+	var person = document.getElementById('person_${currentNode.identifier}');
+    person.addEventListener("click", function(e) {
+         ShowHideLayer(e.currentTarget.id.replace("person_", ""));
+    });
 
 });
 </script>
