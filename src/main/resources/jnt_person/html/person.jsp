@@ -6,7 +6,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <template:addResources type="css" resources="person.css"/>
 <template:addResources type="css" resources="jquery.fancybox.css"/>
-<template:addResources type="javascript" resources="app/person.bundle.js"/>
+<template:addResources type="javascript" resources="apps/person.bundle.js"/>
 
 <div class="personListItem">
     <jcr:nodeProperty var="picture" node="${currentNode}" name="picture"/>
@@ -42,5 +42,5 @@
 <div style="display:none"><div id="pict${currentNode.identifier}"><img src="${picture.node.url}" width="350"/></div></div>
 
 <script type="text/javascript">
-    PersonLibrary.init(${currentNode.identifier});
+    PersonLibrary.init("${currentNode.identifier}");
 </script>

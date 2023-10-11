@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import './lib/facybox';
+import 'jquery.fancybox';
 
 function ShowHideLayer(boxID) {
     /* Obtain reference for the selected boxID layer and its button */
@@ -24,7 +24,7 @@ export function init(currentNodeId) {
 
         /* Using custom settings */
 
-        $("a#apict${currentNode.identifier}").fancybox({
+        $(`a#apict${currentNodeId}`).fancybox({
             'hideOnContentClick': true
         });
 
@@ -39,8 +39,11 @@ export function init(currentNodeId) {
         });
 
         var person = document.getElementById(`person_${currentNodeId}}`);
-        person.addEventListener("click", function(e) {
-            ShowHideLayer(e.currentTarget.id.replace("person_", ""));
-        });
+
+        if (person) {
+            person.addEventListener("click", function(e) {
+                ShowHideLayer(e.currentTarget.id.replace("person_", ""));
+            });
+        }
     });
 }

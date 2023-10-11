@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "jquery": "3.4.x",
-    "jquery-validation": "1.17.x"
+    "jquery-validation": "1.17.x",
+    "jquery.fancybox": "^2.1.5"
   }
 }
