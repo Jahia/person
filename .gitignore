@@ -21,4 +21,3 @@ coverage/
 # macOS
 .DS_Store
 .yalc
-yalc.lock
