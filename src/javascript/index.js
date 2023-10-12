@@ -17,7 +17,6 @@ function ShowHideLayer(boxID) {
 
 export function init(currentNodeId) {
     $(document).ready(() => {
-        console.info('Initializing js for person module');
         /* This is basic - uses default settings */
 
         $("a#single_image").fancybox();
