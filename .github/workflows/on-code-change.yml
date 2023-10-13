@@ -11,6 +11,9 @@ jobs:
   build:
     name: Build Module
     runs-on: ubuntu-latest
+    env:
+      NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+      NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 11 for x64
